@@ -1,0 +1,190 @@
+:root {
+	--gray: hsl(0, 0%, 51%);
+
+	--dark-card: hsl(0, 0%, 12%);
+	--dark-bg: hsl(0, 0%, 18%);
+	--dark-card-bg: hsla(0, 0%, 12%, 0.95);
+
+	--fw-regular: 500;
+	--fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+	height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	place-content: center;
+	color: var(--gray);
+	background-image: url('images/pattern-background-desktop.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: var(--dark-bg);
+}
+
+.player {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wrapper {
+	padding: 1.7rem;
+	border-radius: 1rem;
+	background-color: var(--dark-card-bg);
+}
+
+.details {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.track-art {
+	margin: 1rem;
+	height: 250px;
+	width: 250px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+
+.now-playing {
+	font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.track-name {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.track-album {
+	font-size: 1rem;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.active {
+	color: black;
+}
+
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+	padding: 1rem;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+}
+
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.previous-track:hover,
+.next-track:hover {
+	opacity: 1;
+}
+
+.slider_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.seek-slider {
+	width: 60%;
+}
+.volume-slider {
+	width: 30%;
+}
+
+.current-time,
+.total-duration,
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 0.625rem;
+}
+
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+    cursor: pointer;
+}
