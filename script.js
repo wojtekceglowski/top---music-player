@@ -68,20 +68,20 @@ function loadTrack(trackIndex) {
 
 	currentTrack.addEventListener('ended', nextTrack)
 
-	switch (true) {
-		case trackIndex === 0:
+	switch (trackIndex) {
+		case 0:
 			trackName.style.color = '#61c1d9'
 			break
-		case trackIndex === 1:
+		case 1:
 			trackName.style.color = '#f25b42'
 			break
-		case trackIndex === 2:
+		case 2:
 			trackName.style.color = '#98f356'
 			break
-		case trackIndex === 3:
+		case 3:
 			trackName.style.color = '#e4d319'
 			break
-		case trackIndex === 4:
+		case 4:
 			trackName.style.color = '#8f96a0'
 			break
 	}
